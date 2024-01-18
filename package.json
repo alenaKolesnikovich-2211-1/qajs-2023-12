@@ -12,7 +12,8 @@
     "codestyle": "run-p lint format",
     "codestyle:fix": "run-s lint:fix format:fix",
     "build": "babel src --out-dir build --source-maps inline",
-    "test": "jest"
+    "test": "jest --verbose",
+    "coverage": "jest --coverage"
   },
   "author": "Damir Rysaev <freepad@ya.ru>",
   "license": "MIT",
