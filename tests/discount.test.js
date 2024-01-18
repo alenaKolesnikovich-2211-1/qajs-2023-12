@@ -28,17 +28,11 @@ describe('calculateTotal function', () => {
     },
   ]
 
-  test.each(testCasesPositive)(
-    '%s',
-    ({ products, discount, expected }) => {
-      const result = calculateTotal(products, discount)
-      expect(result.totalWithoutDiscount).toBe(expected.totalWithoutDiscount)
-      expect(result.totalWithDiscount).toBeCloseTo(
-        expected.totalWithDiscount,
-        2,
-      )
-    },
-  )
+  test.each(testCasesPositive)('%s', ({ products, discount, expected }) => {
+    const result = calculateTotal(products, discount)
+    expect(result.totalWithoutDiscount).toBe(expected.totalWithoutDiscount)
+    expect(result.totalWithDiscount).toBeCloseTo(expected.totalWithDiscount, 2)
+  })
 
   const testCasesNegative = [
     {
