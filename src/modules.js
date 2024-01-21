@@ -7,3 +7,7 @@ export function greet(name) {
 export const farewell = name => {
   return `Goodbye, ${name}!`
 }
+
+export const hello123 = name => {
+  return `Hello, ${name} !`
+}
